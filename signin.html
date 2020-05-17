@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
@@ -40,7 +41,7 @@
             <section>
                 <div id="id01" class="modal">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <form class="modal-content" action="/action_page.php">
+                    <form class="modal-content">
                       <div class="container" style="position: relative; text-align: center;">
                         <h1>Sign Up</h1>
                         <p>Please fill in this form to create an account.</p>
@@ -68,27 +69,23 @@
             <section>
                 <div id="id02" class="modal">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <form class="modal-content" action="/action_page.php">
+                    <form class="modal-content">
                       <div class="container" style="position: relative; text-align: center;">                 
                         <div class="clearfix">
                           <label for="psw"><b> OR </b></label><br><br>
 
                           <label for="email"><b>Email &nbsp;</b></label>
-                        <input type="email" style="text-align: center;" placeholder="Enter Email" name="email" required><br><br>
+                        <input type="email" style="text-align: center;" placeholder="Enter Email" id="emailUser" name="email" required><br><br>
                   
                         <label for="psw"><b>Password &nbsp;</b></label>
-                        <input type="password" style="text-align: center;" placeholder="Enter Password" name="psw" required><br><br>
-                        
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                          </label><br><br>
-
-                        <button type="submit" href="eventpage.html" class="signinbtn">Sign In</button>
+                        <input type="password" style="text-align: center;" placeholder="Enter Password" id="passwordUser" name="psw" required><br><br>
+                        <button type="submit" id="joelSampleTest">Sign In</button>
 
                         </div>
                       </div>
                     </form>
                   </div>
+                  <script src="signin.js"></script>
             </section>
 
          
