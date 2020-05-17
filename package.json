@@ -1,12 +1,12 @@
 {
-  "name": "evelyn",
+  "name": "karunya event server",
   "version": "1.0.0",
   "description": "Evelyn Template",
   "author": "Pasquale Vitiello <pasqualevitiello@gmail.com>",
   "license": "GPLv3",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/pasqualevitiello/evelyn.git"
+    "url": "https://github.com/captainphilip/kvl.git"
   },
   "bugs": {
     "url": "https://bitbucket.org/pasqualevitiello/evelyn/issues"
@@ -49,6 +49,6 @@
     "stylelint": "^9.4.0",
     "uglify-es": "^3.3.10"
   },
-  "homepage": "https://bitbucket.org/pasqualevitiello/evelyn#readme",
+  "homepage": "https://github.com/captainphilip/kvl/blob/master/README.md",
   "main": ".eslintrc.js"
 }
