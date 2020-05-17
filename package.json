@@ -1,7 +1,10 @@
 {
-  "name": "karunya event server",
+  "name": "evelyn",
   "version": "1.0.0",
   "description": "Evelyn Template",
+    "engines": {
+    "node": "12.16.3"
+  },
   "author": "Pasquale Vitiello <pasqualevitiello@gmail.com>",
   "license": "GPLv3",
   "repository": {
