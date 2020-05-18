@@ -1,16 +1,33 @@
-$('#joelSampleTest').click(function(){
-    var settings = {
-        "url": "https://karunyaevent.herokuapp.com/user/login",
-        "method": "POST",
-        "timeout": 0,
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "data": JSON.stringify({"emailId":"saasas@gmail.com","password":"sasasasas"}),
-      };
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-      });
-});
+$("#signinbtn").click(function (e) {  
+        e.preventDefault();
 
+        var emailId = $('#emailUser').val();  
+        var password = $('#passwordUser').val();  
+        // console.log(emailId);   
+        // console.log(person.emailId);
+        // console.log(person.password);
+        // obj = `{"emailId":"${emailId}","password":"${password}"}`;
+        // raw = `{"emailId":"${emailId}","password":"${password}"}`;
+        // let rawData = raw;
+        // console.log(JSON.stringify(obj));
+        $.ajax({  
+            url: 'https://karunyaevent.herokuapp.com/user/login',  
+            type: 'POST', 
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',  
+            data: JSON.stringify({"emailId":emailId,"password":password}), 
+            // headers: {
+            //     'Authorization': `Bearer ${data.token}`,
+            // }, 
+            success: function (data, textStatus, xhr) {  
+              console.log(data.message);
+                                 if (data.message == "Auth successful") {
+                        document.location = "event_1.html";
+                   }
+        
+            },  
+            error: function (xhr, textStatus, errorThrown) {  
+                console.log('Error in Operation');  
+            }  
+        });  
+    });  
