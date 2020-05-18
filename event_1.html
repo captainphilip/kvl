@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
@@ -27,8 +28,8 @@
             <section class="hero text-light text-center">
                 <div class="container-sm">
                     <div class="hero-inner">
-                        <h1 class="hero-title h2-mobile mt-0 is-revealing">EVENT 1</h1>
-                        <p class="hero-paragraph is-revealing">By Speaker XYZ</p>
+                        <h1 class="hero-title h2-mobile mt-0 is-revealing" id="eventTitleDetail">EVENT 1</h1>
+                        <p class="hero-paragraph is-revealing" id="eventSpeakerDetail">By Speaker XYZ</p>
                         <p class="hero-cta is-revealing"><a class="button button-secondary button-shadow" href="#clients section">Get Started</a></p>
                         <!-- <div class="hero-media">
                             <iframe width="750" height="600" src="https://www.youtube.com/embed/live_stream?channel=UCb3mJbxwy993sYJ1gB102ng"></iframe>
@@ -43,10 +44,10 @@
                         <div class="container-sm"> -->
                             <div class ="feature-extended" style="position: relative;">
                                 <div class="feature-extended-image is-revealing">
-                                    <iframe width="750" height="400" src="https://www.youtube.com/embed/J4L0hD_MaIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="750" height="400" id="youtubeEvent" src="https://www.youtube.com/embed/J4L0hD_MaIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 <div class id ="feature-extended-body">
-                                    <iframe width="370" height="400" src="https://karunyavideo.live/channel/test/?layout=embedded"></iframe>
+                                    <iframe width="370" height="400" id="rocketEvent" src="https://karunyavideo.live/channel/test/?layout=embedded"></iframe>
                                 </div>
                             </div>
                         <!-- </div>
@@ -401,5 +402,6 @@
         </footer>
     </div>
     <script src="dist/js/main.min.js"></script>
+    <script src="event_1.js"></script>
 </body>
 </html>
