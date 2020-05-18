@@ -23,7 +23,7 @@ $("#signinbtn").click(function (e) {
               console.log(data.message);
               if (data.message == "Auth successful") {
                 sessionStorage.setItem('status','loggedIn') 
-                    document.location = "eventpage.html";
+                document.location = "events.html";
                 }
         
             },  

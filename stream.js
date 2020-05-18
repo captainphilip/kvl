@@ -30,5 +30,5 @@
       });
   }
   else{
-    document.location = "signin.html";
+    document.location = "login.html";
   }
