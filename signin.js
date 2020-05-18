@@ -21,9 +21,10 @@ $("#signinbtn").click(function (e) {
             // }, 
             success: function (data, textStatus, xhr) {  
               console.log(data.message);
-                    if (data.message == "Auth successful") {
-                        document.location = "eventpage.html";
-                   }
+              if (data.message == "Auth successful") {
+                sessionStorage.setItem('status','loggedIn') 
+                    document.location = "eventpage.html";
+                }
         
             },  
             error: function (xhr, textStatus, errorThrown) {  
