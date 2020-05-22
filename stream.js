@@ -27,8 +27,13 @@
         document.getElementById("eventDescDetail").innerHTML = response.data[0].discription.toString();
         $("#youtubeEvent").attr("src", response.data[0].youtubeLive.toString());
         $("#rocketEvent").attr("src", response.data[0].rocketChat.toString());
+        console.log(sessionStorage.getItem('rocketToken'));
       });
   }
   else{
     document.location = "login.html";
   }
+  window.parent.postMessage({
+    event: 'login-with-token',
+    loginToken: 'EOkC3lu2w6yqgYBOUF3cjIlALfBEibOP8JkrtO-5qyM'
+  }, 'https://karunyavideo.live');
