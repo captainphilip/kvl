@@ -34,7 +34,10 @@ $("#signinbtn").click(function (e) {
                     success: function (data, textStatus, xhr) {  
                         console.log(data.status);
                         if (data.status == "success") {
-                        sessionStorage.setItem('status','loggedIn') 
+                        sessionStorage.setItem('status','loggedIn')
+                        // sessionStorage.setItem('email', emailId)
+                        // sessionStorage.setItem('password', password)
+                        sessionStorage.setItem('rocketToken', data.data["authToken"])
                         document.location = "events.html";
                         }
                     },  
