@@ -27,23 +27,6 @@
         document.getElementById("eventDescDetail").innerHTML = response.data[0].discription.toString();
         $("#youtubeEvent").attr("src", response.data[0].youtubeLive.toString());
         $("#rocketEvent").attr("src", response.data[0].rocketChat.toString());
-
-        $.ajax({  
-          url: 'https://karunyavideo.live/api/v1/login',  
-          type: 'POST', 
-          contentType: "application/json",
-          dataType: 'json',  
-          data: JSON.stringify({"email":"donald@email.com","password":"12345"}), 
-          // headers: {
-          //     "Access-Control-Allow-Origin": "https://karunya.live/",
-          // }, 
-          success: function (data, textStatus, xhr) {  
-              console.log(data.status);  
-          },  
-          error: function (xhr, textStatus, errorThrown) {  
-              console.log('Error in Operation for rocketchat API');  
-          }  
-        });
       });
   }
   else{
