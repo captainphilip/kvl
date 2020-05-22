@@ -20,15 +20,35 @@ $("#signinbtn").click(function (e) {
             //     'Authorization': `Bearer ${data.token}`,
             // }, 
             success: function (data, textStatus, xhr) {  
-              console.log(data.message);
-              if (data.message == "Auth successful") {
-                sessionStorage.setItem('status','loggedIn') 
-                document.location = "events.html";
-                }
-        
-            },  
+            console.log(data.message);
+            if (data.message == "Auth successful") {
+                $.ajax({  
+                    url: 'https://karunyavideo.live/api/v1/login',  
+                    type: 'POST', 
+                    contentType: "application/json",
+                    dataType: 'json',  
+                    data: JSON.stringify({"email":emailId,"password":password}), 
+                    // headers: {
+                    //     "Access-Control-Allow-Origin": "https://karunya.live/",
+                    // }, 
+                    success: function (data, textStatus, xhr) {  
+                        console.log(data.status);
+                        if (data.status == "success") {
+                        sessionStorage.setItem('status','loggedIn') 
+                        document.location = "events.html";
+                        }
+                    },  
+                    error: function (xhr, textStatus, errorThrown) {  
+                        console.log('Error in Operation for rocketchat API');  
+                    }  
+                });
+            }
+        },
             error: function (xhr, textStatus, errorThrown) {  
-                console.log('Error in Operation');  
+                console.log('Error in Operation for karunyaevent API');  
             }  
         });  
     });  
+
+
+    
