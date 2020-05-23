@@ -15,7 +15,7 @@ $("#signinbtn").click(function (e) {
             type: 'POST', 
             contentType: "application/json; charset=utf-8",
             dataType: 'json',  
-            data: JSON.stringify({"emailId":emailId,"password":password}), 
+            data: JSON.stringify({"email":emailId,"password":password}), 
             // headers: {
             //     'Authorization': `Bearer ${data.token}`,
             // }, 

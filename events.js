@@ -7,7 +7,7 @@
     
     $.ajax(settings).done(function (response) {
       console.log(response);
-      document.getElementById("eventTitle").innerHTML = response.data[0].title.toString();
+      document.getElementById("eventTitle").innerHTML = response.data[1].title.toString();
     });
   }
   else{

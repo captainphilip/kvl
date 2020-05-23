@@ -23,11 +23,11 @@
       
       $.ajax(settings).done(function (response) {
         console.log(response);
-        document.getElementById("eventTitleDetail").innerHTML = response.data[0].title.toString();
-        document.getElementById("eventSpeakerDetail").innerHTML = "By "+response.data[0].organizer.toString();
-        document.getElementById("eventDescDetail").innerHTML = response.data[0].discription.toString();
-        $("#youtubeEvent").attr("src", response.data[0].youtubeLive.toString());
-        $("#rocketEvent").attr("src", response.data[0].rocketChat.toString());
+        document.getElementById("eventTitleDetail").innerHTML = response.data[1].title.toString();
+        document.getElementById("eventSpeakerDetail").innerHTML = "By "+response.data[1].organizer.toString();
+        document.getElementById("eventDescDetail").innerHTML = response.data[1].discription.toString();
+        $("#youtubeEvent").attr("src", response.data[1].youtubeLive.toString());
+        $("#rocketEvent").attr("src", response.data[1].rocketChat.toString());
         console.log(sessionStorage.getItem('rocketToken'));
       });
   }
