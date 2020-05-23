@@ -13,6 +13,7 @@
 //     // document.getElementById("eventTitleDetail").innerHTML = response.data[0].title.toString();
 //     // document.getElementById("eventSpeakerDetail").innerHTML = "By "+response.data[0].title.toString();
 //   });
+  var authToken = sessionStorage.getItem('rocketToken');
   if (sessionStorage.getItem('status') != null) { 
     var settings = {
         "url": "https://karunyaevent.herokuapp.com/event/listevent",
@@ -33,7 +34,16 @@
   else{
     document.location = "login.html";
   }
-  window.parent.postMessage({
-    event: 'login-with-token',
-    loginToken: 'EOkC3lu2w6yqgYBOUF3cjIlALfBEibOP8JkrtO-5qyM'
-  }, 'https://karunyavideo.live');
+  
+  function authenticateIFrame() {
+    document.getElementById('rcChannel').contentWindow.postMessage({
+        externalCommand: 'login-with-token',
+        token: authToken
+    }, '*');
+  }
+
+  window.onload = function () {
+      authenticateIFrame();
+      var oiframe = document.getElementById('rcChannel');
+      oiframe.contentWindow.location.reload();
+  };
